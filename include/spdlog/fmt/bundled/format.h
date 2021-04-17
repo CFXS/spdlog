@@ -1624,7 +1624,7 @@ template <typename OutputIt, typename Char, typename UInt> struct int_writer {
   void on_hex() {
     if (specs.alt) {
       prefix[prefix_size++] = '0';
-      prefix[prefix_size++] = specs.type;
+      prefix[prefix_size++] = specs.type == 'X' ? 'x' : specs.type; // CFXS_EDIT: lower case X for cap hex
     }
     int num_digits = count_digits<4>(abs_value);
     out = write_int(out, num_digits, get_prefix(), specs,
