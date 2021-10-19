@@ -2,6 +2,9 @@
 
 cmake_minimum_required(VERSION 3.10)
 
+set(CMAKE_UNITY_BUILD true)
+set(CMAKE_UNITY_BUILD_BATCH_SIZE 16)
+
 # ---------------------------------------------------------------------------------------
 # Start spdlog project
 # ---------------------------------------------------------------------------------------
